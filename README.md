@@ -54,6 +54,9 @@ MERN full-stack Single-Page-App (SPA) hosted on AWS cloud platform, using an EC2
   - all HTTP web traffic redirected to port 8080
 4.0 Used Route53 to point DNS name to rexrobotix.com
 5.0 Created key for Github within project folder, then added that key to Github, and thus able to clone repo to EC2 instance
+6.0 Server-side
+  6.1 created simple express server instance and spun up on 8080, route53 worked correctly displaying server output
+  
 
 
 

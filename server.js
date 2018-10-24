@@ -2,8 +2,14 @@ const express = require('express');
 
 const app = express();
 
-app.get('/', (req,res) => {
-    res.end("hello from index on server");
+app.get('/api/users', (req,res) => {
+    res.json([{
+        id: 1,
+        username: "samsepi0l"
+    }, {
+        id: 2,
+        username: "D0loresH4ze"
+    }]);
 });
 
 app.listen(8080, () => {
