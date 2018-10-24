@@ -12,6 +12,6 @@ app.get('/api/users', (req,res) => {
     }]);
 });
 
-app.listen(8080, () => {
-    console.log("server at port 8080");
+app.listen(3000, () => {
+    console.log("server at port 3000");
 });
