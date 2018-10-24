@@ -1,6 +1,9 @@
 const express = require('express');
+const path = require('path');
 
 const app = express();
+
+app.use(express.static(path.join(__dirname, 'client/build')));
 
 app.get('/api/users', (req,res) => {
     res.json([{
@@ -12,6 +15,11 @@ app.get('/api/users', (req,res) => {
     }]);
 });
 
-app.listen(8080, () => {
-    console.log("server at port 8080");
-});
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname+'/client/build/index.html'));
+  });
+
+  const port = process.env.PORT || 8080;
+  app.listen(port);
+  
+  console.log(`Password generator listening on ${port}`);
